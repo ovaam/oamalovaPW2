@@ -9,15 +9,16 @@ Answer:
     ```
 
 Question: What does the code on lines 25 and 29 do?
+-
   25. title.translatesAutoresizingMaskIntoConstraints = false
   29. view.addSubview(title)
 -
 Answer:
-  ~ the code on line 25 disables automatic constraints on specific view (here title) and allows us to set our own manually.
+  the code on line 25 disables automatic constraints on specific view (here title) and allows us to set our own manually.
     ```
     * код на 25 строчке отключает автоматическое изменение констрейнтов, чтобы мы смогли далее установить собственные для данного view (title).
     ```
-  ~ the code on line 29 appears our title as view by adding subview on view(screen)
+   the code on line 29 appears our title as view by adding subview on view(screen)
     ```
     * код на 29 строчке добавляет к нашему исходному view (экрану) заголовок (title)
     ```
@@ -25,7 +26,7 @@ Answer:
 Question: What is a safe area layout guide?
 -
 Answer:
-  ~ the safe area is a place on screen where subviews can be placed and they won`t be covered by navigation bars, tab bars,
+   the safe area is a place on screen where subviews can be placed and they won`t be covered by navigation bars, tab bars,
     toolbars, and other ancestor views. So safe area layout guide reflects this place and if the view is not currently installed
     in a view hierarchy, or is not yet visible onscreen, the layout guide edges are equal to the edges of the view.
     ```
@@ -36,10 +37,11 @@ Answer:
 
 
 Question: What is [weak self] on line 23 and why it is important?
+  -
   23. sliderRed.valueChanged = { [weak self] value in self?.view.backgroundColor = ... }
   -
 Answer:
-  ~ [weak self] is a construct used in closures that avoids strong reference cycles. In our case it is necessary to avoid leakage
+   [weak self] is a construct used in closures that avoids strong reference cycles. In our case it is necessary to avoid leakage
     memory (objects will refer to each other and will not be deleted from memory), and also so that the execution of this code fragment ends
     when a nil value occurs in self. In our case, it is important to avoid nil, since we use value, and without making the reference weak, we can
     get exceptions.
@@ -51,6 +53,7 @@ Answer:
     ```
     
 Question: What does clipsToBounds mean?
+ -
  7. stack.clipsToBounds = true
  -
 Answer:
@@ -62,6 +65,7 @@ Answer:
   ```
 
 Question: What is the valueChanged type? What is Void and what is Double?
+-
 11. var valueChanged: ((Double) -> Void)?
 -
 Answer:
